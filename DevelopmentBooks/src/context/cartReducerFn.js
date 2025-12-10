@@ -5,6 +5,12 @@ const cartActionHandlers = {
 		}
 		return state;
 	},
+	INCREASE_BOOK_QUANTITY: (state, action) =>
+		state.map((item) => {
+			if (item.bookId === action.payload)
+				return { ...item, quantity: item.quantity + 1 };
+			return item;
+		}),
 };
 
 export function cartReducerFn(state, action) {

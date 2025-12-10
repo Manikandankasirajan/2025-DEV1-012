@@ -14,9 +14,17 @@ const CartProvider = ({ children }) => {
 		});
 	};
 
+	const increaseBookQuantity = (bookId) => {
+		dispatch({
+			type: "INCREASE_BOOK_QUANTITY",
+			payload: bookId,
+		});
+	};
+
 	const contextValue = {
 		cart: state,
 		addToCart,
+		increaseBookQuantity,
 	};
 
 	return (

@@ -29,6 +29,10 @@ const findText = (value) => {
 	return screen.findByText(value);
 };
 
+const getIncreaseQtyBtn = () => {
+	return screen.getAllByTestId(testConstants.TEST_ID_INCREASE_BOOK_QTY_BTN);
+};
+
 describe("app component", () => {
 	let user;
 	beforeEach(() => {
@@ -330,6 +334,38 @@ describe("app component", () => {
 		books.forEach((book, index) => {
 			expect(book).toHaveAttribute("title", testConstants.BOOK_TITLES[index]);
 		});
+	});
+	it("should return totalprice-100,discountprice-0,finalprice-100 for purchase for two copies of same book", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+
+		await user.click(addToCartBtnBook1);
+		await user.click(getShowCartBtn());
+
+		const increaseBookQtyBtn = getIncreaseQtyBtn();
+
+		await user.click(increaseBookQtyBtn[testConstants.BOOK_ONE]);
+
+		const totalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_TOTAL_PRICE_VALUE
+		);
+		const discountPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_DISCOUNT_PRICE_VALUE
+		);
+		const finalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_FINAL_PRICE_VALUE
+		);
+
+		expect(totalPriceValue).toHaveTextContent(
+			testConstants.TOTAL_PRICE_FOR_TWO_COPY_OF_SAME_BOOK
+		);
+		expect(discountPriceValue).toHaveTextContent(
+			testConstants.DISCOUNT_PRICE_FOR_TWO_COPY_OF_SAME_BOOK
+		);
+		expect(finalPriceValue).toHaveTextContent(
+			testConstants.FINAL_PRICE_FOR_TWO_COPY_OF_SAME_BOOK
+		);
 	});
 });
 

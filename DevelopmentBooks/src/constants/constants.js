@@ -22,6 +22,7 @@ export const constants = {
 	TITLE_LIMIT: 24,
 	ELLIPSIS: "...",
 	TEST_ID_BOOK: "book",
+	INCREASE_BOOK_QTY_LABEL: "Increase Book Quantity",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -38,6 +39,8 @@ export const constants = {
 	TEST_ID_CART_ITEM_TITLE: "cartItemTitle",
 	TEST_ID_CART_ITEM_QTY: "cartItemQuantity",
 	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
+	TEST_ID_INCREASE_BOOK_QTY_BTN: "increaseBookQuantity",
+	TEST_ID_PLUS_ICON: "plusIcon",
 
 	DISCOUNT_RULE: { 1: 0, 2: 5, 3: 10, 4: 20, 5: 25 },
 };

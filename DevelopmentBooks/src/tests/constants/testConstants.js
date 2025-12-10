@@ -29,6 +29,8 @@ export const testConstants = {
 	TEST_ID_CART_ITEM_QTY: "cartItemQuantity",
 	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
 	TEST_ID_BOOK: "book",
+	TEST_ID_INCREASE_BOOK_QTY_BTN: "increaseBookQuantity",
+	TEST_ID_PLUS_ICON: "plusIcon",
 
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
 	TEST_ID_ADD_TO_CART_BTN_BOOK2: "TEST_ID_The Clean Coder",
@@ -59,6 +61,10 @@ export const testConstants = {
 	TOTAL_PRICE_FOR_FIVE_BOOK: "₹250.00",
 	DISCOUNT_PRICE_FOR_FIVE_BOOK: "₹62.50",
 	FINAL_PRICE_FOR_FIVE_BOOK: "₹187.50",
+
+	TOTAL_PRICE_FOR_TWO_COPY_OF_SAME_BOOK: "₹100.00",
+	DISCOUNT_PRICE_FOR_TWO_COPY_OF_SAME_BOOK: "₹0.00",
+	FINAL_PRICE_FOR_TWO_COPY_OF_SAME_BOOK: "₹100.00",
 
 	BOOK_TITLES: [
 		"Clean Code",
