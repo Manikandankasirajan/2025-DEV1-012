@@ -15,6 +15,10 @@ export const constants = {
 	EMPTY_CART_MESSAGE: "Your cart is Empty...",
 	CART_SUMMARY_HEADING_TEXT: "Cart Summary",
 	DECIMAL_POINTS: 2,
+	HUNDRED: 100,
+	PRICE_TYPE_TOTAL_PRICE: "Total Price",
+	PRICE_TYPE_DISCOUNT_PRICE: "Discount Price",
+	PRICE_TYPE_FINAL_PRICE: "Final Price",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -31,4 +35,6 @@ export const constants = {
 	TEST_ID_CART_ITEM_TITLE: "cartItemTitle",
 	TEST_ID_CART_ITEM_QTY: "cartItemQuantity",
 	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
+
+	DISCOUNT_RULE: { 1: 0 },
 };

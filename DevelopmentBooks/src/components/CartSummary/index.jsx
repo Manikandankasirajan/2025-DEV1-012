@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import { constants } from "../../constants/constants";
 import CartItem from "../CartItem";
+import PriceDetails from "../PriceDetails";
 
 const CartSummary = () => {
 	const { cart } = useContext(cartContext);
@@ -13,6 +14,7 @@ const CartSummary = () => {
 			{cart.map((bookDetails) => {
 				return <CartItem key={bookDetails.bookId} bookDetails={bookDetails} />;
 			})}
+			<PriceDetails />
 		</div>
 	);
 };
