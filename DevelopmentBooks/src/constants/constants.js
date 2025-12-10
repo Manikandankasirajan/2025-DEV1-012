@@ -14,4 +14,7 @@ export const constants = {
 	TEST_ID_CART: "cart",
 	TEST_ID_CLOSE_CART_BTN: "closeCartBtn",
 	TEST_ID_XMARK_ICON: "xMarkIcon",
+	TEST_ID_BOOK_IMAGE: "bookImage",
+	TEST_ID_BOOK_TITLE: "bookTitle",
+	TEST_ID_BOOK_PRICE: "bookPrice",
 };

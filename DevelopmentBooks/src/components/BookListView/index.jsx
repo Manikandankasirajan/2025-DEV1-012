@@ -1,6 +1,7 @@
 import React from "react";
 import { constants } from "../../constants/constants";
 import useFetchBooks from "../../hooks/useFetchBooks";
+import Book from "../Book";
 
 const BookListView = () => {
 	const { error, bookList } = useFetchBooks(constants.API_URL);
@@ -11,8 +12,12 @@ const BookListView = () => {
 				{constants.BOOKLIST_HEADING}
 			</h2>
 			{error && <p className="mt-48 text-center">{error}</p>}
-			{isBookListEmpty() && (
+			{isBookListEmpty() ? (
 				<p className="mt-48 text-center">{constants.NO_RESULTS_MESSAGE}</p>
+			) : (
+				bookList.map((bookDetails) => {
+					return <Book key={bookDetails.id} bookDetails={bookDetails} />;
+				})
 			)}
 		</main>
 	);

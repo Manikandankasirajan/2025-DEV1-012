@@ -95,4 +95,23 @@ describe("api requests", () => {
 			await findText(testConstants.NO_RESULTS_MESSAGE)
 		).toBeInTheDocument();
 	});
+	it("should render books details when api request is sucessfull", () => {
+		useFetchBooks.mockReturnValue({
+			error: null,
+			bookList: testConstants.BOOKS,
+		});
+		render(<App />);
+		const bookImgs = screen.getAllByTestId(testConstants.TEST_ID_BOOK_IMAGE);
+		bookImgs.forEach((bookImg, index) => {
+			expect(bookImg).toHaveAttribute("src", testConstants.BOOKS[index].imgSrc);
+		});
+		const bookTitles = screen.getAllByTestId(testConstants.TEST_ID_BOOK_TITLE);
+		bookTitles.forEach((bookTitle, index) => {
+			expect(bookTitle).toHaveTextContent(testConstants.BOOKS[index].title);
+		});
+		const bookPrices = screen.getAllByTestId(testConstants.TEST_ID_BOOK_PRICE);
+		bookPrices.forEach((bookPrice, index) => {
+			expect(bookPrice).toHaveTextContent(testConstants.BOOKS[index].price);
+		});
+	});
 });

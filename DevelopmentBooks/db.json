@@ -1,3 +1,10 @@
 {
-	"books": []
+	"books": [
+		{
+			"id": "11d03f1a-66fa-46b1-a473-6a9e24090fb4",
+			"imgSrc": "./src/assets/Kata_DevelopmentBooks_CleanCode.png",
+			"title": "Clean Code",
+			"price": 50
+		}
+	]
 }

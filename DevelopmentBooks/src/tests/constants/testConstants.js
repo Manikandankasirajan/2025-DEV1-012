@@ -12,4 +12,16 @@ export const testConstants = {
 	TEST_ID_CART: "cart",
 	TEST_ID_CLOSE_CART_BTN: "closeCartBtn",
 	TEST_ID_XMARK_ICON: "xMarkIcon",
+	TEST_ID_BOOK_IMAGE: "bookImage",
+	TEST_ID_BOOK_TITLE: "bookTitle",
+	TEST_ID_BOOK_PRICE: "bookPrice",
+
+	BOOKS: [
+		{
+			id: "11d03f1a-66fa-46b1-a473-6a9e24090fb4",
+			imgSrc: "./src/assets/Kata_DevelopmentBooks_CleanCode.png",
+			title: "Clean Code",
+			price: 50,
+		},
+	],
 };
