@@ -3,6 +3,8 @@ export const testConstants = {
 	BOOKLIST_HEADING: "Available Books",
 	MISSING_URL_MESSAGE: "Request failed.., URL not found!",
 	NETWORK_ERROR: "Network Error",
+	NO_RESULTS_MESSAGE: "Book shelf is Empty.., Comeback later",
+	EMPTY_ARRAY: [],
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",

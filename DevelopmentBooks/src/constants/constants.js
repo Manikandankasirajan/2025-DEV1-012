@@ -5,6 +5,8 @@ export const constants = {
 	CLOSE_CART_BTN_LABEL: "Close Cart",
 	MISSING_URL_MESSAGE: "Request failed.., URL not found!",
 	API_URL: "http://localhost:3001/books",
+	NO_RESULTS_MESSAGE: "Book shelf is Empty.., Comeback later",
+	ZERO: 0,
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",

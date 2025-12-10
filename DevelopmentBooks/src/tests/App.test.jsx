@@ -83,4 +83,15 @@ describe("api requests", () => {
 		const errorMessage = await screen.findByText(testConstants.NETWORK_ERROR);
 		expect(errorMessage).toBeInTheDocument();
 	});
+	it("should display no results message when books not found", async () => {
+		useFetchBooks.mockReturnValue({
+			error: null,
+			bookList: testConstants.EMPTY_ARRAY,
+		});
+		render(<App />);
+		const noResultsMessage = await screen.findByText(
+			testConstants.NO_RESULTS_MESSAGE
+		);
+		expect(noResultsMessage).toBeInTheDocument();
+	});
 });
