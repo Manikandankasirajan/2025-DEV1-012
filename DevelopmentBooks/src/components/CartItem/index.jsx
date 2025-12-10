@@ -2,13 +2,13 @@ import PropTypes from "prop-types";
 import React, { useContext } from "react";
 import { constants } from "../../constants/constants";
 import formatPrice from "../../utils/formatPrice";
-import { FaMinus, FaPlus } from "react-icons/fa6";
+import { FaMinus, FaPlus, FaTrashCan } from "react-icons/fa6";
 import { cartContext } from "../../context/cartContext";
 
 const CartItem = ({ bookDetails }) => {
 	const { bookId, bookTitle, bookPrice, quantity } = bookDetails;
 	const totalPriceOfBook = bookPrice * quantity;
-	const { increaseBookQuantity, decreaseBookQuantity } =
+	const { increaseBookQuantity, decreaseBookQuantity, removeFromCart } =
 		useContext(cartContext);
 	return (
 		<div className="p-2 grid grid-cols-6 border-b">
@@ -37,9 +37,18 @@ const CartItem = ({ bookDetails }) => {
 					<FaPlus data-testid={constants.TEST_ID_PLUS_ICON} />
 				</button>
 			</div>
-			<h4 className="text-sm" data-testid={constants.TEST_ID_CART_ITEM_PRICE}>
+			<h4
+				className="text-sm flex justify-center items-center"
+				data-testid={constants.TEST_ID_CART_ITEM_PRICE}>
 				{formatPrice(totalPriceOfBook)}
 			</h4>
+			<button
+				aria-label={constants.REMOVE_BOOK_FROM_CART_LABEL}
+				data-testid={constants.TEST_ID_REMOVE_BOOK_FROM_CART_BTN}
+				className="ml-2 text-xs cursor-pointer"
+				onClick={() => removeFromCart(bookId)}>
+				<FaTrashCan data-testid={constants.TEST_ID_TRASH_CAN_ICON} />
+			</button>
 		</div>
 	);
 };

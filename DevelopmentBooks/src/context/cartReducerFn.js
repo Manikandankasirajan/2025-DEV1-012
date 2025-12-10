@@ -17,6 +17,8 @@ const cartActionHandlers = {
 				return { ...item, quantity: item.quantity - 1 };
 			return item;
 		}),
+	REMOVE_FROM_CART: (state, action) =>
+		state.filter((item) => item.bookId !== action.payload),
 };
 
 export function cartReducerFn(state, action) {

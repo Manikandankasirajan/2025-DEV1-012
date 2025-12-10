@@ -26,12 +26,19 @@ const CartProvider = ({ children }) => {
 			payload: bookId,
 		});
 	};
+	const removeFromCart = (bookId) => {
+		dispatch({
+			type: "REMOVE_FROM_CART",
+			payload: bookId,
+		});
+	};
 
 	const contextValue = {
 		cart: state,
 		addToCart,
 		increaseBookQuantity,
 		decreaseBookQuantity,
+		removeFromCart,
 	};
 
 	return (
