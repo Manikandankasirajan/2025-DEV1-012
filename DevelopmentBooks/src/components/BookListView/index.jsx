@@ -3,7 +3,7 @@ import { constants } from "../../constants/constants";
 import useFetchBooks from "../../hooks/useFetchBooks";
 
 const BookListView = () => {
-	const { error } = useFetchBooks();
+	const { error } = useFetchBooks(constants.API_URL);
 	return (
 		<main>
 			<h2 className="py-5 font-bold text-center">

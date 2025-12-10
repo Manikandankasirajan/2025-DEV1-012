@@ -77,4 +77,10 @@ describe("api requests", () => {
 		);
 		expect(errorMessage).toBeInTheDocument();
 	});
+	it("should display error message when api request fails", async () => {
+		useFetchBooks.mockReturnValue({ error: testConstants.NETWORK_ERROR });
+		render(<App />);
+		const errorMessage = await screen.findByText(testConstants.NETWORK_ERROR);
+		expect(errorMessage).toBeInTheDocument();
+	});
 });

@@ -4,6 +4,7 @@ export const constants = {
 	SHOW_CART_BTN_LABEL: "Show Cart",
 	CLOSE_CART_BTN_LABEL: "Close Cart",
 	MISSING_URL_MESSAGE: "Request failed.., URL not found!",
+	API_URL: "http://localhost:3001/books",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
