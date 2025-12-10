@@ -9,6 +9,7 @@ export const constants = {
 	ZERO: 0,
 	CART_QTY_ONE: 1,
 	ADD_TO_CART_BTN_TEXT: "Add to Cart",
+	CHECK_MARK: "\u2713",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",

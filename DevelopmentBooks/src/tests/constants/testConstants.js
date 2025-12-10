@@ -6,6 +6,7 @@ export const testConstants = {
 	NO_RESULTS_MESSAGE: "Book shelf is Empty.., Comeback later",
 	EMPTY_ARRAY: [],
 	ONE: "1",
+	CHECK_MARK: "\u2713",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",

@@ -84,6 +84,14 @@ describe("app component", () => {
 		expect(cartQtyBanner).toBeInTheDocument();
 		expect(cartQtyBanner.textContent).toEqual(testConstants.ONE);
 	});
+	it("should disable add to cart button for books added to cart", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+		await user.click(addToCartBtnBook1);
+		expect(addToCartBtnBook1).toBeDisabled();
+		expect(addToCartBtnBook1).toHaveTextContent(testConstants.CHECK_MARK);
+	});
 });
 
 describe("api requests", () => {
