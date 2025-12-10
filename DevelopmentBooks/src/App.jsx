@@ -9,7 +9,7 @@ const App = () => {
 		<>
 			<Header setShowCart={setShowCart} />
 			<BookListView />
-			{showCart && <Cart />}
+			{showCart && <Cart setShowCart={setShowCart} />}
 		</>
 	);
 };

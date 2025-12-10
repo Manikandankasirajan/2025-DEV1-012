@@ -16,6 +16,10 @@ const getCart = () => {
 	return screen.queryByTestId(testConstants.TEST_ID_CART);
 };
 
+const getCloseCartBtn = () => {
+	return screen.queryByTestId(testConstants.TEST_ID_CLOSE_CART_BTN);
+};
+
 describe("app component", () => {
 	let user;
 	beforeEach(() => {
@@ -43,5 +47,17 @@ describe("app component", () => {
 
 		expect(getCartOverlay()).toBeInTheDocument();
 		expect(getCart()).toBeInTheDocument();
+	});
+	it("should render close cart when close cart button is clicked", async () => {
+		await user.click(getShowCartBtn());
+
+		expect(getCart()).toBeInTheDocument();
+		expect(getCloseCartBtn()).toBeInTheDocument();
+		const xMarkIcon = screen.queryByTestId(testConstants.TEST_ID_XMARK_ICON);
+		expect(xMarkIcon).toBeInTheDocument();
+
+		await user.click(getCloseCartBtn());
+
+		expect(getCart()).not.toBeInTheDocument();
 	});
 });
