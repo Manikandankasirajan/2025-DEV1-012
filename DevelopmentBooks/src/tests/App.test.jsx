@@ -189,8 +189,6 @@ describe("app component", () => {
 		await user.click(addToCartBtnBook2);
 		await user.click(getShowCartBtn());
 
-		screen.debug();
-
 		const totalPriceValue = screen.getByTestId(
 			testConstants.TEST_ID_TOTAL_PRICE_VALUE
 		);
@@ -476,6 +474,47 @@ describe("app component", () => {
 		expect(finalPriceValue).toHaveTextContent(
 			testConstants.FINAL_PRICE_FOR_TWO_COPY_OF_SAME_BOOK
 		);
+	});
+	it("should render empty cart when cart is cleared", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+		const addToCartBtnBook2 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK2
+		);
+
+		await user.click(addToCartBtnBook1);
+		await user.click(addToCartBtnBook2);
+		await user.click(getShowCartBtn());
+
+		const totalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_TOTAL_PRICE_VALUE
+		);
+		const discountPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_DISCOUNT_PRICE_VALUE
+		);
+		const finalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_FINAL_PRICE_VALUE
+		);
+
+		expect(totalPriceValue).toHaveTextContent(
+			testConstants.TOTAL_PRICE_FOR_TWO_BOOK
+		);
+		expect(discountPriceValue).toHaveTextContent(
+			testConstants.DISCOUNT_PRICE_FOR_TWO_BOOK
+		);
+		expect(finalPriceValue).toHaveTextContent(
+			testConstants.FINAL_PRICE_FOR_TWO_BOOK
+		);
+
+		const clearCartBtn = screen.getByTestId(
+			testConstants.TEST_ID_CLEAR_CART_BTN
+		);
+
+		await user.click(clearCartBtn);
+
+		const emptyCart = screen.getByTestId(testConstants.TEST_ID_EMPTY_CART);
+		expect(emptyCart).toBeInTheDocument();
 	});
 });
 

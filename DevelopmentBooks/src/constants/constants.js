@@ -26,6 +26,7 @@ export const constants = {
 	DECREASE_BOOK_QTY_LABEL: "Decrease Book Quantity",
 	ONE: 1,
 	REMOVE_BOOK_FROM_CART_LABEL: "Remove Book from Cart",
+	CLEAR_CART_BTN_TEXT: "Clear Cart",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -48,6 +49,7 @@ export const constants = {
 	TEST_ID_MINUS_ICON: "minusIcon",
 	TEST_ID_REMOVE_BOOK_FROM_CART_BTN: "removeBookFromCart",
 	TEST_ID_TRASH_CAN_ICON: "trashCanIcon",
+	TEST_ID_CLEAR_CART_BTN: "clearCart",
 
 	DISCOUNT_RULE: { 1: 0, 2: 5, 3: 10, 4: 20, 5: 25 },
 };

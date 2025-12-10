@@ -35,6 +35,7 @@ export const testConstants = {
 	TEST_ID_MINUS_ICON: "minusIcon",
 	TEST_ID_REMOVE_BOOK_FROM_CART_BTN: "removeBookFromCart",
 	TEST_ID_TRASH_CAN_ICON: "trashCanIcon",
+	TEST_ID_CLEAR_CART_BTN: "clearCart",
 
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
 	TEST_ID_ADD_TO_CART_BTN_BOOK2: "TEST_ID_The Clean Coder",

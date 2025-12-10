@@ -33,12 +33,19 @@ const CartProvider = ({ children }) => {
 		});
 	};
 
+	const clearCart = () => {
+		dispatch({
+			type: "CLEAR_CART",
+		});
+	};
+
 	const contextValue = {
 		cart: state,
 		addToCart,
 		increaseBookQuantity,
 		decreaseBookQuantity,
 		removeFromCart,
+		clearCart,
 	};
 
 	return (
