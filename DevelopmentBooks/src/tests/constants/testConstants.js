@@ -32,6 +32,7 @@ export const testConstants = {
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
 	TEST_ID_ADD_TO_CART_BTN_BOOK2: "TEST_ID_The Clean Coder",
 	TEST_ID_ADD_TO_CART_BTN_BOOK3: "TEST_ID_Clean Architecture",
+	TEST_ID_ADD_TO_CART_BTN_BOOK4: "TEST_ID_Test Driven Development by Example",
 
 	TEST_ID_TOTAL_PRICE_LABEL: "TEST_ID_PRICE_TYPE_Total Price",
 	TEST_ID_DISCOUNT_PRICE_LABEL: "TEST_ID_PRICE_TYPE_Discount Price",
@@ -50,6 +51,9 @@ export const testConstants = {
 	TOTAL_PRICE_FOR_THREE_BOOK: "₹150.00",
 	DISCOUNT_PRICE_FOR_THREE_BOOK: "₹15.00",
 	FINAL_PRICE_FOR_THREE_BOOK: "₹135.00",
+	TOTAL_PRICE_FOR_FOUR_BOOK: "₹200.00",
+	DISCOUNT_PRICE_FOR_FOUR_BOOK: "₹40.00",
+	FINAL_PRICE_FOR_FOUR_BOOK: "₹160.00",
 
 	BOOK_ONE: 0,
 
@@ -70,6 +74,12 @@ export const testConstants = {
 			id: "c6e03e68-adb5-4ecd-b1a2-be25079f3324",
 			imgSrc: "./src/assets/Kata_DevelopmentBooks_CleanArchitecture.jpeg",
 			title: "Clean Architecture",
+			price: 50,
+		},
+		{
+			id: "87a91bcc-e37f-4251-afd8-33d060b93167",
+			imgSrc: "./src/assets/Kata_DevelopmentBooks_TDD.jpeg",
+			title: "Test Driven Development by Example",
 			price: 50,
 		},
 	],

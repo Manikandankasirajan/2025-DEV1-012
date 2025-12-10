@@ -17,6 +17,12 @@
 			"imgSrc": "./src/assets/Kata_DevelopmentBooks_CleanArchitecture.jpeg",
 			"title": "Clean Architecture",
 			"price": 50
+		},
+		{
+			"id": "87a91bcc-e37f-4251-afd8-33d060b93167",
+			"imgSrc": "./src/assets/Kata_DevelopmentBooks_TDD.jpeg",
+			"title": "Test Driven Development by Example",
+			"price": 50
 		}
 	]
 }
