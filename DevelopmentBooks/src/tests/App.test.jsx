@@ -25,6 +25,10 @@ const getCloseCartBtn = () => {
 	return screen.queryByTestId(testConstants.TEST_ID_CLOSE_CART_BTN);
 };
 
+const findText = (value) => {
+	return screen.findByText(value);
+};
+
 describe("app component", () => {
 	let user;
 	beforeEach(() => {
@@ -54,7 +58,7 @@ describe("app component", () => {
 		expect(getCartOverlay()).toBeInTheDocument();
 		expect(getCart()).toBeInTheDocument();
 	});
-	it("should render close cart when close cart button is clicked", async () => {
+	it("should close cart when close cart button is clicked", async () => {
 		await user.click(getShowCartBtn());
 
 		expect(getCart()).toBeInTheDocument();
@@ -72,16 +76,14 @@ describe("api requests", () => {
 	it("should display error message when api request made without url", async () => {
 		useFetchBooks.mockReturnValue({ error: testConstants.MISSING_URL_MESSAGE });
 		render(<App />);
-		const errorMessage = await screen.findByText(
-			testConstants.MISSING_URL_MESSAGE
-		);
-		expect(errorMessage).toBeInTheDocument();
+		expect(
+			await findText(testConstants.MISSING_URL_MESSAGE)
+		).toBeInTheDocument();
 	});
 	it("should display error message when api request fails", async () => {
 		useFetchBooks.mockReturnValue({ error: testConstants.NETWORK_ERROR });
 		render(<App />);
-		const errorMessage = await screen.findByText(testConstants.NETWORK_ERROR);
-		expect(errorMessage).toBeInTheDocument();
+		expect(await findText(testConstants.NETWORK_ERROR)).toBeInTheDocument();
 	});
 	it("should display no results message when books not found", async () => {
 		useFetchBooks.mockReturnValue({
@@ -89,9 +91,8 @@ describe("api requests", () => {
 			bookList: testConstants.EMPTY_ARRAY,
 		});
 		render(<App />);
-		const noResultsMessage = await screen.findByText(
-			testConstants.NO_RESULTS_MESSAGE
-		);
-		expect(noResultsMessage).toBeInTheDocument();
+		expect(
+			await findText(testConstants.NO_RESULTS_MESSAGE)
+		).toBeInTheDocument();
 	});
 });
