@@ -3,6 +3,11 @@ import App from "../App";
 import { beforeEach, expect } from "vitest";
 import { testConstants } from "./constants/testConstants";
 import userEvent from "@testing-library/user-event";
+import useFetchBooks from "../hooks/useFetchBooks";
+
+vi.mock("../hooks/useFetchBooks", () => ({
+	default: vi.fn(),
+}));
 
 const getShowCartBtn = () => {
 	return screen.getByTestId(testConstants.TEST_ID_SHOW_CART_BTN);
@@ -23,6 +28,7 @@ const getCloseCartBtn = () => {
 describe("app component", () => {
 	let user;
 	beforeEach(() => {
+		useFetchBooks.mockReturnValue({ error: null });
 		render(<App />);
 		user = userEvent.setup();
 	});
@@ -59,5 +65,16 @@ describe("app component", () => {
 		await user.click(getCloseCartBtn());
 
 		expect(getCart()).not.toBeInTheDocument();
+	});
+});
+
+describe("api requests", () => {
+	it("should display error message when api request made without url", async () => {
+		useFetchBooks.mockReturnValue({ error: testConstants.MISSING_URL_MESSAGE });
+		render(<App />);
+		const errorMessage = await screen.findByText(
+			testConstants.MISSING_URL_MESSAGE
+		);
+		expect(errorMessage).toBeInTheDocument();
 	});
 });

@@ -1,6 +1,7 @@
 export const testConstants = {
 	HEADER_TEXT: "Development Books",
 	BOOKLIST_HEADING: "Available Books",
+	MISSING_URL_MESSAGE: "Request failed.., URL not found!",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
