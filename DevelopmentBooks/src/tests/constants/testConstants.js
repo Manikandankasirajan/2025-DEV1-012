@@ -28,6 +28,7 @@ export const testConstants = {
 	TEST_ID_CART_ITEM_TITLE: "cartItemTitle",
 	TEST_ID_CART_ITEM_QTY: "cartItemQuantity",
 	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
+	TEST_ID_BOOK: "book",
 
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
 	TEST_ID_ADD_TO_CART_BTN_BOOK2: "TEST_ID_The Clean Coder",
@@ -58,6 +59,21 @@ export const testConstants = {
 	TOTAL_PRICE_FOR_FIVE_BOOK: "₹250.00",
 	DISCOUNT_PRICE_FOR_FIVE_BOOK: "₹62.50",
 	FINAL_PRICE_FOR_FIVE_BOOK: "₹187.50",
+
+	BOOK_TITLES: [
+		"Clean Code",
+		"The Clean Coder",
+		"Clean Architecture",
+		"Test Driven Development by Example",
+		"Working Effectively With Legacy Code",
+	],
+	FORMATED_BOOK_TITLES: [
+		"Clean Code",
+		"The Clean Coder",
+		"Clean Architecture",
+		"Test Driven Development ...",
+		"Working Effectively With...",
+	],
 
 	BOOK_ONE: 0,
 

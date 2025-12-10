@@ -320,6 +320,17 @@ describe("app component", () => {
 			testConstants.FINAL_PRICE_FOR_FIVE_BOOK
 		);
 	});
+	it("should render short book title for books with lengthy title and show tooltip", async () => {
+		const bookTitles = screen.getAllByTestId(testConstants.TEST_ID_BOOK_TITLE);
+		bookTitles.forEach(
+			(bookTitle, index) =>
+				bookTitle === testConstants.FORMATED_BOOK_TITLES[index]
+		);
+		const books = screen.getAllByTestId(testConstants.TEST_ID_BOOK);
+		books.forEach((book, index) => {
+			expect(book).toHaveAttribute("title", testConstants.BOOK_TITLES[index]);
+		});
+	});
 });
 
 describe("api requests", () => {
@@ -357,7 +368,9 @@ describe("api requests", () => {
 		});
 		const bookTitles = screen.getAllByTestId(testConstants.TEST_ID_BOOK_TITLE);
 		bookTitles.forEach((bookTitle, index) => {
-			expect(bookTitle).toHaveTextContent(testConstants.BOOKS[index].title);
+			expect(bookTitle).toHaveTextContent(
+				testConstants.FORMATED_BOOK_TITLES[index]
+			);
 		});
 		const bookPrices = screen.getAllByTestId(testConstants.TEST_ID_BOOK_PRICE);
 		bookPrices.forEach((bookPrice, index) => {

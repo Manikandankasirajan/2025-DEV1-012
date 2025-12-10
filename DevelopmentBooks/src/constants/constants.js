@@ -19,6 +19,9 @@ export const constants = {
 	PRICE_TYPE_TOTAL_PRICE: "Total Price",
 	PRICE_TYPE_DISCOUNT_PRICE: "Discount Price",
 	PRICE_TYPE_FINAL_PRICE: "Final Price",
+	TITLE_LIMIT: 24,
+	ELLIPSIS: "...",
+	TEST_ID_BOOK: "book",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
