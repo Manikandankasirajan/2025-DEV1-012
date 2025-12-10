@@ -52,4 +52,7 @@ export const constants = {
 	TEST_ID_CLEAR_CART_BTN: "clearCart",
 
 	DISCOUNT_RULE: { 1: 0, 2: 5, 3: 10, 4: 20, 5: 25 },
+
+	DISCOUNT_MESSAGE:
+		"Combine different books for exclusive discounts --> 2 books - 5% | 3 books - 10% | 4 books - 20% | 5 books - 25% <--",
 };

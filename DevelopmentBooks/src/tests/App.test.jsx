@@ -516,6 +516,13 @@ describe("app component", () => {
 		const emptyCart = screen.getByTestId(testConstants.TEST_ID_EMPTY_CART);
 		expect(emptyCart).toBeInTheDocument();
 	});
+
+	it("should render discount message", async () => {
+		const discountMessage = await screen.findByText(
+			testConstants.DISCOUNT_MESSAGE
+		);
+		expect(discountMessage).toBeInTheDocument();
+	});
 });
 
 describe("api requests", () => {

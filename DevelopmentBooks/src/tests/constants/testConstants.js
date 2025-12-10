@@ -129,4 +129,7 @@ export const testConstants = {
 			price: 50,
 		},
 	],
+
+	DISCOUNT_MESSAGE:
+		"Combine different books for exclusive discounts --> 2 books - 5% | 3 books - 10% | 4 books - 20% | 5 books - 25% <--",
 };

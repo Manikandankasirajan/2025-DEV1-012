@@ -26,6 +26,11 @@ const Header = ({ setShowCart }) => {
 					)}
 				</div>
 			</nav>
+			<div className="overflow-hidden whitespace-nowrap bg-red-600">
+				<p className="marquee inline-block text-xs text-white">
+					{constants.DISCOUNT_MESSAGE}
+				</p>
+			</div>
 		</header>
 	);
 };
