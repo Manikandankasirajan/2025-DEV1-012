@@ -9,4 +9,9 @@ describe("app component", () => {
 		const headerText = screen.getByRole("heading", { level: 1 });
 		expect(headerText).toHaveTextContent(testConstants.HEADER_TEXT);
 	});
+	it("should render booklist section heading", () => {
+		render(<App />);
+		const bookListheading = screen.getByRole("heading", { level: 2 });
+		expect(bookListheading).toHaveTextContent(testConstants.BOOKLIST_HEADING);
+	});
 });
